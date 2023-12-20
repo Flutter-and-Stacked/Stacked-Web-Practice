@@ -1,4 +1,6 @@
+import 'package:first_stacked_app/ui/common/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:first_stacked_app/app/app.bottomsheets.dart';
 import 'package:first_stacked_app/app/app.dialogs.dart';
@@ -22,9 +24,15 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveApp(
-      builder: (_) => MaterialApp.router(
+      builder: (context) => MaterialApp.router(
         routerDelegate: stackedRouter.delegate(),
         routeInformationParser: stackedRouter.defaultRouteParser(),
+        theme: Theme.of(context).copyWith(
+            primaryColor: kcBackgroundColor,
+            focusColor: kcPrimaryColor,
+            textTheme: GoogleFonts.openSansTextTheme().apply(
+              bodyColor: Colors.white,
+            )),
       ),
     ).animate().fadeIn(
           delay: const Duration(milliseconds: 50),
