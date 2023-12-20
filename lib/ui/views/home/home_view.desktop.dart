@@ -55,15 +55,16 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                             style: ktsBodyLarge.copyWith(
                                 fontWeight: FontWeight.w700),
                           ),
-                          GradientText("Sign up to be notified: ",
-                              style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
-                              ),
-                              colors: const [
-                                Color(0xff0CFF60),
-                                Color(0xff0091FB)
-                              ])
+                          horizontalSpaceTiny,
+                          GradientText(
+                            "Sign up to be notified: ",
+                            style: ktsBodyLarge.copyWith(
+                                fontWeight: FontWeight.w600),
+                            colors: const [
+                              kcTitleGradientRight,
+                              kcTitleGradientLeft
+                            ],
+                          )
                         ],
                       ),
                       verticalSpaceMedium,
@@ -113,7 +114,15 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                     ],
                   ),
                 ),
-                Container(width: 500, color: Colors.amber)
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.asset(
+                    "/master-web-hero-image.png",
+                    width: kdDesktopMaxContentWidth * 0.4,
+                    height: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
+                )
               ],
             ),
           ),
