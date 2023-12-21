@@ -1,13 +1,19 @@
 import 'package:first_stacked_app/ui/common/app_colors.dart';
 import 'package:first_stacked_app/ui/common/app_constants.dart';
-import 'package:first_stacked_app/ui/common/shared_styles.dart';
 import 'package:first_stacked_app/ui/common/ui_helpers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:stacked/stacked.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'home_viewmodel.dart';
+
+// my widgets:
+import 'package:first_stacked_app/ui/views/home/widgets/home_title.dart';
+import 'package:first_stacked_app/ui/views/home/widgets/home_subtitle.dart';
+import 'package:first_stacked_app/ui/views/home/widgets/home_notify_button.dart';
+import 'package:first_stacked_app/ui/views/home/widgets/home_image.dart';
+import 'package:first_stacked_app/ui/common/academy_icon.dart';
+import 'package:first_stacked_app/ui/common/input_field.dart';
 
 class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
   const HomeViewDesktop({super.key});
@@ -28,101 +34,29 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        "Credit to FilledStacks Academy",
-                        style: TextStyle(
-                          // color: kcLightGrey,
-                          fontSize: 15,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
+                      const AcademyIcon(),
                       const Spacer(flex: 2),
-                      GradientText(
-                        "MASTER\nFLUTTER",
-                        style: ktsTitleText,
-                        colors: const [Color(0xff0CFF60), Color(0xff0091FB)],
-                      ),
+                      const HomeTitle(),
                       verticalSpaceTiny,
-                      Text(
-                        "ON THE WEB",
-                        style: ktsTitleText,
-                      ),
-                      verticalSpaceTiny,
-                      Row(
-                        children: [
-                          Text(
-                            "Build amazing software, the right way.",
-                            style: ktsBodyLarge.copyWith(
-                                fontWeight: FontWeight.w700),
-                          ),
-                          horizontalSpaceTiny,
-                          GradientText(
-                            "Sign up to be notified: ",
-                            style: ktsBodyLarge.copyWith(
-                                fontWeight: FontWeight.w600),
-                            colors: const [
-                              kcTitleGradientRight,
-                              kcTitleGradientLeft
-                            ],
-                          )
-                        ],
-                      ),
+                      const HomeSubtitle(),
                       verticalSpaceMedium,
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        padding: const EdgeInsets.all(8),
                         child: SvgPicture.asset('/sign-up-arrow.svg'),
                       ),
                       verticalSpaceMedium,
-                      Row(
+                      const Row(
                         children: [
-                          Container(
-                            width: kdDesktopMaxContentWidth * 0.3,
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 20),
-                            decoration: BoxDecoration(
-                                color: const Color(0xFF232323),
-                                borderRadius: BorderRadius.circular(8)),
-                            child: const TextField(
-                              decoration: InputDecoration.collapsed(
-                                hintText: "Your email",
-                                hintStyle: TextStyle(color: Color(0xff989898)),
-                                filled: true,
-                                fillColor: Color(0xFF232323),
-                              ),
-                            ),
-                          ),
+                          InputField(),
                           horizontalSpaceSmall,
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 16),
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: Colors.white),
-                            child: const Text(
-                              "Notify Me",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.black,
-                              ),
-                            ),
-                          )
+                          HomeNotifyButton(),
                         ],
                       ),
                       const Spacer(flex: 2),
                     ],
                   ),
                 ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
-                    "/master-web-hero-image.png",
-                    width: kdDesktopMaxContentWidth * 0.4,
-                    height: double.infinity,
-                    fit: BoxFit.cover,
-                  ),
-                )
+                const HomeImage(),
               ],
             ),
           ),
