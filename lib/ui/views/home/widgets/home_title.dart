@@ -2,6 +2,7 @@ import 'package:first_stacked_app/ui/common/shared_styles.dart';
 import 'package:first_stacked_app/ui/common/ui_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+//the responsive builder package allows use of the getValueForScreenType function to let us build responsive designs on the widget level which is neat
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class HomeTitle extends StatelessWidget {
@@ -10,7 +11,11 @@ class HomeTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: getValueForScreenType(
+        context: context,
+        mobile: CrossAxisAlignment.center,
+        desktop: CrossAxisAlignment.start,
+      ),
       children: [
         GradientText(
           "MASTER\nFLUTTER",
