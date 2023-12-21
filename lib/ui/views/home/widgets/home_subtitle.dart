@@ -2,6 +2,7 @@ import 'package:first_stacked_app/ui/common/app_colors.dart';
 import 'package:first_stacked_app/ui/common/shared_styles.dart';
 import 'package:first_stacked_app/ui/common/ui_helpers.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class HomeSubtitle extends StatelessWidget {
@@ -9,19 +10,22 @@ class HomeSubtitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          "Build amazing software, the right way.",
-          style: ktsBodyLarge.copyWith(fontWeight: FontWeight.w700),
-        ),
-        horizontalSpaceTiny,
-        GradientText(
-          "Sign up to be notified: ",
-          style: ktsBodyLarge.copyWith(fontWeight: FontWeight.w600),
-          colors: const [kcTitleGradientRight, kcTitleGradientLeft],
-        )
-      ],
+    return ScreenTypeLayout.builder(
+      mobile: (_) => Column(children: children),
+      desktop: (_) => Row(children: children),
     );
   }
 }
+
+final children = [
+  Text(
+    "Build amazing software, the right way.",
+    style: ktsBodyLarge.copyWith(fontWeight: FontWeight.w700),
+  ),
+  horizontalSpaceTiny,
+  GradientText(
+    "Sign up to be notified: ",
+    style: ktsBodyLarge.copyWith(fontWeight: FontWeight.w600),
+    colors: const [kcTitleGradientRight, kcTitleGradientLeft],
+  )
+];

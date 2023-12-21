@@ -24,14 +24,18 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveApp(
+      preferDesktop:
+          true, //with this here, whenever we are not in mobile it will be the desktop view
       builder: (context) => MaterialApp.router(
         routerDelegate: stackedRouter.delegate(),
         routeInformationParser: stackedRouter.defaultRouteParser(),
         theme: Theme.of(context).copyWith(
+            // here we are making a copy of the existing theme with these colors as the defaults:
             primaryColor: kcBackgroundColor,
             focusColor: kcPrimaryColor,
+            // setting the default font
             textTheme: GoogleFonts.openSansTextTheme().apply(
-              bodyColor: Colors.white,
+              bodyColor: Colors.white, //setting the default text color to white
             )),
       ),
     ).animate().fadeIn(
