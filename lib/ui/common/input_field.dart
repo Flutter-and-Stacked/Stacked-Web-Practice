@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class InputField extends StatelessWidget {
   const InputField({
     super.key,
+    TextEditingController? controller,
   });
 
   @override

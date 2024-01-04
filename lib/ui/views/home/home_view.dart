@@ -33,7 +33,7 @@ class HomeView extends StackedView<HomeViewModel> with $HomeView {
 
   @override
   void onViewModelReady(HomeViewModel viewModel) {
-    syncFormWithViewModel(viewModel as FormStateHelper);
+    syncFormWithViewModel(viewModel);
   }
   // this enables two-way binding, aka this syncs the typed value in the view model with the form data
 }
