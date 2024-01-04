@@ -6,11 +6,8 @@
 
 // ignore_for_file: public_member_api_docs, constant_identifier_names, non_constant_identifier_names,unnecessary_this
 
-import 'package:first_stacked_app/app/app.dialogs.dart';
-import 'package:first_stacked_app/app/app.locator.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'package:stacked_services/stacked_services.dart';
 
 const bool _autoTextFieldValidation = true;
 
@@ -175,18 +172,3 @@ void updateValidationData(FormStateHelper model) =>
     model.setValidationMessages({
       EmailValueKey: getValidationMessage(EmailValueKey),
     });
-
-// my code
-
-class HomeViewModel extends FormViewModel {
-  final _dialogService = locator<DialogService>();
-
-  void captureEmail() {
-    _dialogService.showCustomDialog(
-      variant: DialogType.infoAlert,
-      title: 'Thanks for Signing Up',
-      // #2: Use emailValue like a normal property
-      description: 'Check in $emailValue for a verification email',
-    );
-  }
-}
