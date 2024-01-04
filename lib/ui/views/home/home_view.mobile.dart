@@ -12,7 +12,8 @@ import 'package:stacked/stacked.dart';
 import 'home_viewmodel.dart';
 
 class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
-  const HomeViewMobile({super.key});
+  final TextEditingController? controller;
+  const HomeViewMobile({super.key, this.controller});
 
   @override
   Widget build(BuildContext context, HomeViewModel viewModel) {
@@ -20,18 +21,20 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
       backgroundColor: kcBackgroundColor,
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 50),
-        children: const [
-          AcademyIcon(),
+        children: [
+          const AcademyIcon(),
           verticalSpaceLarge,
-          HomeTitle(),
+          const HomeTitle(),
           verticalSpaceSmall,
-          HomeSubtitle(),
+          const HomeSubtitle(),
           verticalSpaceLarge,
-          InputField(),
+          InputField(controller: controller),
           verticalSpaceSmall,
-          HomeNotifyButton(),
+          HomeNotifyButton(
+            onTap: viewModel.captureEmail,
+          ),
           verticalSpaceLarge,
-          HomeImage(),
+          const HomeImage(),
         ],
       ),
     );
