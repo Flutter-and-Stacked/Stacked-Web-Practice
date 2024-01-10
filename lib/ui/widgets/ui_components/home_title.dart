@@ -18,7 +18,7 @@ class HomeTitle extends StatelessWidget {
       ),
       children: [
         GradientText(
-          "MASTER\nFLUTTER",
+          "LET'S\nLEARN",
           style: ktsTitleText.copyWith(
               fontSize: getValueForScreenType(
                   context: context, mobile: 60, desktop: 80)),
@@ -26,10 +26,10 @@ class HomeTitle extends StatelessWidget {
         ),
         verticalSpaceTiny,
         Text(
-          "ON THE WEB",
+          "FLUTTER",
           style: ktsTitleText.copyWith(
               fontSize: getValueForScreenType(
-                  context: context, mobile: 60, desktop: 80)),
+                  context: context, mobile: 80, desktop: 100)),
         ),
       ],
     );

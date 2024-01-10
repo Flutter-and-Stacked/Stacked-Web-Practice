@@ -7,7 +7,7 @@ class AcademyIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'FilledStacks Academy',
+      'Thanks to FilledStacks Academy for the help!',
       style: ktsBodyRegular.copyWith(fontWeight: FontWeight.w800),
     );
   }

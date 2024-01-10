@@ -1,6 +1,5 @@
 import 'package:first_stacked_app/app/app.dialogs.dart';
 import 'package:first_stacked_app/app/app.locator.dart';
-import 'package:first_stacked_app/ui/views/home/home_view.form.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
@@ -11,6 +10,6 @@ class HomeViewModel extends FormViewModel {
     _dialogService.showCustomDialog(
         variant: DialogType.infoAlert,
         title: 'Thanks for signing up!',
-        description: 'Check in $emailValue for a verification email.');
+        description: 'Check in your email for a verification email.');
   }
 }
