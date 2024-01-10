@@ -19,12 +19,12 @@ class HomeSubtitle extends StatelessWidget {
 
 final children = [
   Text(
-    "Build amazing software, the right way.",
+    "Test out this functionality.",
     style: ktsBodyLarge.copyWith(fontWeight: FontWeight.w700),
   ),
   horizontalSpaceTiny,
   GradientText(
-    "Sign up to be notified: ",
+    "This form is synced with the view model, how cool! ",
     style: ktsBodyLarge.copyWith(fontWeight: FontWeight.w600),
     colors: const [kcTitleGradientRight, kcTitleGradientLeft],
   )

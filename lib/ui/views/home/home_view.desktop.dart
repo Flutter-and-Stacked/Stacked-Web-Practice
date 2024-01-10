@@ -1,6 +1,10 @@
 import 'package:first_stacked_app/ui/common/app_colors.dart';
 import 'package:first_stacked_app/ui/common/app_constants.dart';
 import 'package:first_stacked_app/ui/common/ui_helpers.dart';
+import '../../widgets/ui_components/home_image.dart';
+import '../../widgets/ui_components/home_notify_button.dart';
+import '../../widgets/ui_components/home_subtitle.dart';
+import '../../widgets/ui_components/home_title.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -8,10 +12,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'home_viewmodel.dart';
 
 // my widgets:
-import 'package:first_stacked_app/ui/views/home/widgets/home_title.dart';
-import 'package:first_stacked_app/ui/views/home/widgets/home_subtitle.dart';
-import 'package:first_stacked_app/ui/views/home/widgets/home_notify_button.dart';
-import 'package:first_stacked_app/ui/views/home/widgets/home_image.dart';
+
 import 'package:first_stacked_app/ui/common/academy_icon.dart';
 import 'package:first_stacked_app/ui/common/input_field.dart';
 

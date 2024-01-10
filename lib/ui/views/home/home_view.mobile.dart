@@ -2,10 +2,11 @@ import 'package:first_stacked_app/ui/common/academy_icon.dart';
 import 'package:first_stacked_app/ui/common/app_colors.dart';
 import 'package:first_stacked_app/ui/common/input_field.dart';
 import 'package:first_stacked_app/ui/common/ui_helpers.dart';
-import 'package:first_stacked_app/ui/views/home/widgets/home_image.dart';
-import 'package:first_stacked_app/ui/views/home/widgets/home_notify_button.dart';
-import 'package:first_stacked_app/ui/views/home/widgets/home_subtitle.dart';
-import 'package:first_stacked_app/ui/views/home/widgets/home_title.dart';
+import 'package:first_stacked_app/ui/widgets/ui_components/home_image.dart';
+import 'package:first_stacked_app/ui/widgets/ui_components/home_notify_button.dart';
+import 'package:first_stacked_app/ui/widgets/ui_components/home_subtitle.dart';
+import 'package:first_stacked_app/ui/widgets/ui_components/home_title.dart';
+
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
