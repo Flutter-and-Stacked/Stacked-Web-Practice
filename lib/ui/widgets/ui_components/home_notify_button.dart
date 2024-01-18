@@ -1,3 +1,4 @@
+import 'package:first_stacked_app/extensions/hover_extensions.dart';
 import 'package:flutter/material.dart';
 
 class HomeNotifyButton extends StatelessWidget {
@@ -22,6 +23,6 @@ class HomeNotifyButton extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ).scaleOnHover();
   }
 }

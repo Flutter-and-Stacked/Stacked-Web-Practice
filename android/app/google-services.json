@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "972484977912",
+    "project_id": "first-stacked-app-2024",
+    "storage_bucket": "first-stacked-app-2024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972484977912:android:d6c3a660d2eaa7a42a070d",
+        "android_client_info": {
+          "package_name": "com.example.first_stacked_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOk0wfGGAvfWOaMUDZE1JRVVIqN9UqKQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

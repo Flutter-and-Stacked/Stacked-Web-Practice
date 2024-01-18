@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "first-stacked-app-2024",
+    "staging": "first-stacked-app-2024"
+  },
+  "targets": {},
+  "etags": {}
+}

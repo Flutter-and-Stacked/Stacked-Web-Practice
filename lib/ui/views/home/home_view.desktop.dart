@@ -44,7 +44,7 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                       verticalSpaceMedium,
                       Padding(
                         padding: const EdgeInsets.all(8),
-                        child: SvgPicture.asset('/sign-up-arrow.svg'),
+                        child: SvgPicture.asset('sign-up-arrow.svg'),
                       ),
                       verticalSpaceMedium,
                       Row(
