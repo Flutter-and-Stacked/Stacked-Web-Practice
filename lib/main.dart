@@ -8,9 +8,12 @@ import 'package:first_stacked_app/app/app.locator.dart';
 import 'package:first_stacked_app/app/app.router.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:first_stacked_app/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   setPathUrlStrategy();
   await setupLocator(stackedRouter: stackedRouter);
   setupDialogUi();
